@@ -10,7 +10,7 @@ import { NamedNode } from 'rdflib';
 import { ForkingStore } from '@lblod/ember-submission-form-fields';
 import { FORM_GRAPH, META_GRAPH, SOURCE_GRAPH } from '../../utils/constants';
 import { task } from 'ember-concurrency';
-import { notifyFormSavedSuccessfully } from 'frontend-lmb/utils/toasts';
+import { showSuccessToast } from 'frontend-lmb/utils/toasts';
 import { loadFormInto } from 'frontend-lmb/utils/loadFormInto';
 import { isValidForm } from 'frontend-lmb/utils/is-valid-form';
 
@@ -56,7 +56,7 @@ export default class NewInstanceComponent extends Component {
     }
 
     // Success
-    notifyFormSavedSuccessfully(this.toaster);
+    showSuccessToast(this.toaster, 'Form saved successfully');
 
     if (this.args.onCreate) {
       this.args.onCreate({

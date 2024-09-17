@@ -1,6 +1,7 @@
 import Route from '@ember/routing/route';
 
 import { service } from '@ember/service';
+import { getFormFrom } from 'frontend-lmb/utils/get-form';
 
 export default class AanvragenRoute extends Route {
   @service currentSession;
@@ -17,6 +18,7 @@ export default class AanvragenRoute extends Route {
   }
 
   async model() {
-    return {};
+    const form = await getFormFrom(this.store, 'aanvrager');
+    return { form };
   }
 }
