@@ -1,4 +1,4 @@
-# frontend-organiser-cycling-competion-group-7
+# frontend-organiser-cycling-competition-group-7
 
 Frontend for the requests by an organizer for cycling races.
 
