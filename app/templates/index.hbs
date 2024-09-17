@@ -3,8 +3,9 @@
     <div class="au-o-grid au-o-grid--small">
       <div class="au-o-grid__item au-u-2-5@medium">
         <AuContent class="au-u-margin-bottom">
-          <AuHeading @skin="2">{{this.currentSession.groupClassification.label}}
-            {{this.currentSession.group.naam}}</AuHeading>
+          <!--- Using user name instead of organization name because didn't have the time to get the correct model into the db -->
+          <AuHeading @skin="2">{{this.currentSession.user.voornaam}}
+            {{this.currentSession.user.achternaam}}</AuHeading>
           <p>Indien u toegang mist tot een van de modules in het loket, neem
             contact op met uw
             <strong>interne beheerder</strong>. Indien er zich een probleem

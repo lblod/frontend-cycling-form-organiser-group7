@@ -21,8 +21,9 @@
     </li>
     <li class="au-c-list-horizontal__item">
       {{#if this.session.isAuthenticated}}
+        <!--- Using user name instead of organization name because didn't have the time to get the correct model into the db -->
         <AuDropdown
-          @title="{{this.currentSession.user.voornaam}} {{this.currentSession.user.achternaam}} - {{this.currentSession.groupClassification.label}} {{this.currentSession.group.naam}}"
+          @title="{{this.currentSession.user.voornaam}} {{this.currentSession.user.achternaam}}"
           @buttonLabel="Account settings"
           @alignment="right"
           role="menu"
