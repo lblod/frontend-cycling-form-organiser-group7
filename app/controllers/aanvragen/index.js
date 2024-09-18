@@ -27,7 +27,7 @@ export default class AanvragenIndexController extends Controller {
   }
 
   @action
-  async onCreate({ instanceTtl, instanceId }) {
+  async onCreate({ instanceId }) {
     this.router.transitionTo('aanvragen.aanvraag', instanceId);
   }
 }
