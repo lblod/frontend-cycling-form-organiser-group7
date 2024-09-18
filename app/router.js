@@ -28,7 +28,7 @@ Router.map(function () {
 
   this.route('aanvragen', function () {
     this.route('aanvraag', { path: '/:id/aanvraag' }, function () {
-      this.route('aanvrager');
+      this.route('page2');
     });
   });
 

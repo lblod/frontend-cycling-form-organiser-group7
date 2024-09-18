@@ -1,12 +1,10 @@
 {{page-title "Aanvragen"}}
 
-{{this.model.activiteit.name}}
-{{this.model.activiteit.date}}
-
 <div class="au-c-body-container au-c-body-container--scroll">
+  {{!-- {{this.model.activiteit.name}}
+{{this.model.activiteit.date}} --}}
   <div class="au-o-box">
-    <div class="au-o-box">
-      <Form::NewInstance @form={{this.model.form}} />
-    </div>
+    <Form::NewInstance @form={{this.model.form}} @onCreate={{this.onCreate}} />
+
   </div>
 </div>
