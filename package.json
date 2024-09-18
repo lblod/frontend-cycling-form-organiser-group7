@@ -1,8 +1,8 @@
 {
-  "name": "frontend-lmb",
+  "name": "frontend-koersaanvraag",
   "version": "0.0.1",
   "private": true,
-  "description": "Frontend of Lokaal Mandatenbeheer",
+  "description": "Frontend of Koersaanvraag",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lblod/frontend-lokaal-mandatenbeheer.git"

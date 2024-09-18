@@ -1,0 +1,41 @@
+{{page-title "Aanvragen"}}
+
+<AuToolbar
+  @size="large"
+  class="au-u-padding-bottom-none au-u-margin-bottom-none"
+  as |Group|
+>
+  <Group class="au-u-margin-bottom-none">
+    <AuHeading @skin="2">
+      Aanvragen
+    </AuHeading>
+  </Group>
+  <Group>
+    <AuButton {{on "click" this.openModal}}>
+      Start nieuwe aanvraag
+    </AuButton>
+  </Group>
+</AuToolbar>
+
+<Aanvragen::AanvraagTable
+  @content={{@model.projecten}}
+  @sort={{this.sort}}
+  @page={{this.page}}
+  @size={{this.size}}
+  @route="aanvragen.aanvraag"
+/>
+
+<AuModalContainer />
+<AuModal
+  @title="Start aanvraag nieuw project"
+  @modalOpen={{this.modalOpen}}
+  @closable={{true}}
+  @closeModal={{this.closeModal}}
+>
+  <div class="au-o-box">
+    <Form::NewInstance
+      @onCreate={{this.onCreate}}
+      @form={{@model.newProjectForm}}
+    />
+  </div>
+</AuModal>

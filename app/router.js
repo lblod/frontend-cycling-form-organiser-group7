@@ -26,7 +26,11 @@ Router.map(function () {
     this.route('toegankelijkheidsverklaring');
   });
 
-  this.route('aanvragen');
+  this.route('aanvragen', function () {
+    this.route('aanvraag', { path: '/:id/aanvraag' }, function () {
+      this.route('aanvrager');
+    });
+  });
 
   this.route('under-construction');
 

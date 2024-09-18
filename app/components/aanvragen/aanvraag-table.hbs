@@ -1,0 +1,26 @@
+<AuDataTable
+  @content={{@content}}
+  @noDataMessage="Geen aanvragen gevonden"
+  @sort={{@sort}}
+  @page={{@page}}
+  @size={{@size}}
+  as |t|
+>
+  <t.content as |c|>
+    <c.header>
+      <AuDataTableThSortable
+        @field="name"
+        @currentSorting={{@sort}}
+        @label="Event naam"
+      />
+    </c.header>
+
+    <c.body as |row|>
+      <td>
+        <LinkTo @route={{@route}} @model={{row.id}} class="au-c-link">
+          {{row.name}}
+        </LinkTo>
+      </td>
+    </c.body>
+  </t.content>
+</AuDataTable>

@@ -7,7 +7,7 @@ import { setContext, setUser } from '@sentry/ember';
 import { SHOULD_ENABLE_SENTRY } from 'frontend-lmb/utils/sentry';
 
 const MODULE = {
-  MANDATENBEHEER: 'LoketLB-mandaatGebruiker',
+  CYCLINGORG: 'CyclingOrg',
 };
 
 export default class CurrentSessionService extends Service {
@@ -60,7 +60,7 @@ export default class CurrentSessionService extends Service {
     return this.roles.includes(role);
   }
 
-  get canAccessMandaat() {
-    return this.canAccess(MODULE.MANDATENBEHEER);
+  get canAccessCyclingOrg() {
+    return this.canAccess(MODULE.CYCLINGORG);
   }
 }

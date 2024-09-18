@@ -1,0 +1,15 @@
+import Route from '@ember/routing/route';
+
+import { service } from '@ember/service';
+import { getFormFrom } from 'frontend-lmb/utils/get-form';
+
+export default class AanvragenAanvraagIndexRoute extends Route {
+  @service router;
+  @service store;
+
+  async model() {
+    const parentModel = await this.modelFor('aanvragen.aanvraag');
+    const form = await getFormFrom(this.store, 'aanvrager');
+    return { activiteit: parentModel.activiteit, form };
+  }
+}

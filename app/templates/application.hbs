@@ -21,7 +21,6 @@
     </li>
     <li class="au-c-list-horizontal__item">
       {{#if this.session.isAuthenticated}}
-        <!--- Using user name instead of organization name because didn't have the time to get the correct model into the db -->
         <AuDropdown
           @title="{{this.currentSession.user.voornaam}} {{this.currentSession.user.achternaam}}"
           @buttonLabel="Account settings"
@@ -30,10 +29,6 @@
         >
           <AuLink @route="auth.switch" @icon="switch" role="menuitem">
             Wissel van bestuurseenheid
-          </AuLink>
-
-          <AuLink @route="settings" @icon="settings" role="menuitem">
-            Instellingen
           </AuLink>
 
           <AuLink @route="auth.logout" @icon="logout" role="menuitem">

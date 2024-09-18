@@ -8,7 +8,7 @@ export default class ApplicationController extends Controller {
   @service router;
   @service store;
 
-  appTitle = 'Wieleraanvraag';
+  appTitle = 'Koersaanvraag';
 
   get isIndex() {
     return this.router.currentRouteName === 'index';
