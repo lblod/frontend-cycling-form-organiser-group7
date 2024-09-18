@@ -3,8 +3,7 @@ steps:
     image: woodpeckerci/plugin-docker-buildx
     settings:
       repo: ${CI_REPO}
-      tags: latest
-    secrets: [ docker_username, docker_password ]
+      dry_run: true
 when:
-  branch: master
-  event: push
+  event:
+    - pull_request
